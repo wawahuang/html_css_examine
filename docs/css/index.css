@@ -21,7 +21,7 @@ body{
     "footer"
 }
 
-/*The geader*/
+/*The header*/
 #layout header{
     grid-area: header;
     background-color: white;
@@ -30,7 +30,7 @@ body{
 /*The content*/
 #layout main{
     grid-area: content;
-    background-color: beige;
+    background-color: cornsilk
 }
 
 /*The footer*/
@@ -49,25 +49,82 @@ body{
 /*The card sections*/
 #cards section{
     flex :0 1 100%;  
-    border:1px black solid;  
+    /*border:1px black solid;  */
     padding: 2em;
     
 }
 
 #cards section div{    
-    border:1px black solid;     
+   /*border:1px rgba(0,0,0,0.1)  solid;*/
+   box-shadow: 2px 2px  1px rgba(0,0,0,0.2);
     
+}
+#card .card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#cards .card cardTitle{
+    flex: 0 1 200px;
+}
+#cards .card cardText{
+    flex: 0 1 100px;
+    padding: 1em;
+
+}#cards .card cardFooter{
+    flex: 0 1 50px;;
+}
+
+#cards .cardFooter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 1em;
+}
+
+#cards .cardFooter .view{
+    flex: 0 1 auto;    
+    padding: 0.5em;
+    border-radius: 0.4em 0 0 0.4em;
+}
+
+#cards .cardFooter .edit{
+    flex: 0 1 auto;    
+    padding: 0.5em;
+    border-radius: 0 0.4em 0.4em 0;
+    
+}
+#cards .cardFooter a{
+    text-decoration: none;
+    color:black;
+    border: 1px solid rgb(127,126,126);
+    background-color: lightgray;
+    color: white;
+    font-size: 0.8em;
+}
+#cards .cardFooter a:hover{
+    color: black;
+}
+    
+#cards .cardFooter span{
+    flex: 0 1 auto;
+    margin-left: auto;
+    padding: 0.5em;
+    font-size:0.8em;
+    color:rgb(126,126,126);
 }
 
 /*The first card section*/
 #cards section.s1 {
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
 }
 
 
 /*The second card section*/
 #cards section.s2{
-    background-color: brown;
+   /* background-color: brown;*/
 }
 
 /*The card titles*/
@@ -109,7 +166,7 @@ footer address{
 
 footer ul  a:link{
     text-decoration: none;
-    color: lightgray;
+    color: rgb(114, 113, 113);
 }
 
 footer ul a:hover{
