@@ -2,14 +2,11 @@ body{
     background-color: lightgray;
 }
 
-/*The root element*/
-#root {
-    width:100%;
-    margin-left:auto;
-    margin-right:auto;
+#root{
+    width: 100%;  
+    margin-left: auto;
+    margin-right: auto; 
 }
-
-/*The layout grid*/
 
 #layout{
     display: grid;
@@ -18,214 +15,169 @@ body{
     grid-template-areas: 
     "header"
     "content"
-    "footer"
+    "footer"    
 }
 
-/*The header*/
 #layout header{
     grid-area: header;
     background-color: white;
 }
-
-/*The content*/
 #layout main{
     grid-area: content;
-    background-color: cornsilk
+    background-color: beige;
 }
-
-/*The footer*/
 #layout footer{
     grid-area: footer;
-    background-color: honeydew;
+    background-color: aquamarine;
+}
+header img{
+    display: block;
+    margin: 1em  auto 2em ;
+
+
 }
 
-/*The cards*/
+
+header h2{
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+    margin-top: 3em;
+    color: lightgray;
+}
 #cards{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-}
-
-/*The card sections*/
-#cards section{
-    flex :0 1 100%;  
-    /*border:1px black solid;  */
-    padding: 2em;
+    flex-wrap: nowrap;
     
 }
 
-#cards section div{    
-   /*border:1px rgba(0,0,0,0.1)  solid;*/
-   box-shadow: 2px 2px  1px rgba(0,0,0,0.2);
-    
-}
-#card .card{
+#cards .card{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
-#cards .card cardTitle{
-    flex: 0 1 200px;
-}
-#cards .card cardText{
-    flex: 0 1 100px;
-    padding: 1em;
 
-}#cards .card cardFooter{
-    flex: 0 1 50px;;
+#cards section{
+    flex: 0 1 100%;
+    padding: 2em;
 }
 
-#cards .cardFooter{
+#cards .card .cardTitle{
+    flex:0 1 200px;
+    
+}
+#cards .card .cardText{
+    flex: 1 1 100px;
+    padding: .5em;
+}
+#cards .card .cardFooter{
+    flex: 1 1 50px;
+    display: block; 
+}
+
+#cards .cardFooter {    
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0 1em;
-}
-
-#cards .cardFooter .view{
-    flex: 0 1 auto;    
-    padding: 0.5em;
-    border-radius: 0.4em 0 0 0.4em;
-}
-
-#cards .cardFooter .edit{
-    flex: 0 1 auto;    
-    padding: 0.5em;
-    border-radius: 0 0.4em 0.4em 0;
     
-}
+} 
+#cards .cardFooter .view{
+    display: block;
+    border-radius: .4em 0 0 0 .4em;
+    
+}    
+#cards .cardFooter .edit{
+    display: block;    
+    border-radius: 0 .4em .4em 0;
+}  
+
 #cards .cardFooter a{
-    text-decoration: none;
-    color:black;
-    border: 1px solid rgb(127,126,126);
+    border:1px solid rgb(94, 93, 93);
     background-color: lightgray;
-    color: white;
-    font-size: 0.8em;
+    font-size: .4em;
+    color: aliceblue;        
 }
 #cards .cardFooter a:hover{
     color: black;
 }
-    
-#cards .cardFooter span{
-    flex: 0 1 auto;
+
+ #cards .cardFooter .span{    
     margin-left: auto;
-    padding: 0.5em;
-    font-size:0.8em;
-    color:rgb(126,126,126);
-}
+ }
 
-/*The first card section*/
-#cards section.s1 {
-    /*background-color: blueviolet;*/
-}
-
-
-/*The second card section*/
-#cards section.s2{
-   /* background-color: brown;*/
-}
-
-/*The card titles*/
-/*#cards h1{
-    text-align: center;
-    margin:2em 0em;
-
-}*/
-
-/*The header titles*/
-header h2{
-    font-size: 2em;
-    text-align: center;
-    line-height: 1.5em;
-    color:rgb(106, 106, 106);
-    margin-top: 2em;
-}
-/*The header image*/
-header img{
-    display: block;
-    margin:1em auto 2em;
-}
-
-footer ul{ 
-    margin: 2em 2em 0 0;
-    padding: 0;
+footer ul {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
 }
-
+footer li{
+    display: block;
+    margin: 2em;
+}
+footer li a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: white;
+}
+footer li a:hover{
+    color: rgb(142, 140, 140);
+}
 footer address{
-    margin-top: 2em;
+    font-size: .8em;
     text-align: center;
-    font-size: small;
     color: lightgray;
 }
-
-footer ul  a:link{
-    text-decoration: none;
-    color: rgb(114, 113, 113);
-}
-
-footer ul a:hover{
-    text-decoration:none ;
-    color: black;
-
-}
-
-footer ul img,footer ul a{
-    display: block;    
-    margin: 0 auto;
-    text-align: center;
-
-}
-footer ul li{
-    list-style-type: none;
-    padding: 0 1em;
+footer ul img,footer ul a {
+    display: block;
+    margin: 0 auto ;
+    text-align: center;   
+    
 }
 
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  
-    #root {
-        width:100%;
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+    #root{
+        width: 100%;   
     }
-}
+ }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    #root {
-        max-width:720px;     
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    #root{
+        width: 100%;   
     }
-    #cards section{ 
-        flex :0 1 50%;
+    #cards selection{
+        flex: 0 1 50%;
     }
-}
 
-/* Large devices (desktops, 992px and up) */
+/* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { 
-    #root {
-        max-width: 960px;        
+    #root{
+        width: 100%;   
     }
-    #cards section{
-        flex :1 1 33%;
+    #cards selection{
+        flex: 0 1 33%;
     }
-}
+ }
 
-/* X-Large devices (large desktops, 1200px and up) */
+/* X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
-    #root {
-        max-width: 1140px;
-
+    #root{
+        width: 100%;   
     }
-}
+ }
 
 /* XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) { 
-    #root {
-        max-width: 1320px;
-        
+@media (min-width: 1400px) {
+    #root{
+        width: 100%;   
     }
-}
+ }
+
